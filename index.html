@@ -1,8 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html lang="bn">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>দোকানের ওয়েব সাইট</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <h1>লগইন করুন</h1>
+        <form id="loginForm" onsubmit="return login(event)">
+            <input type="text" id="username" placeholder="User ID" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">লগইন</button>
+        </form>
+        <div id="errorMessage" class="error"></div>
+    </div>
+
+    <div class="qr-section" id="qrSection" style="display:none;">
     <li><a href="dakhila-print/Y5AuY5ATdjrj836hYgf6ude5kH749Yt.html">Dowlotpur-749</a></li>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-qrcode/1.0/jquery.qrcode.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
