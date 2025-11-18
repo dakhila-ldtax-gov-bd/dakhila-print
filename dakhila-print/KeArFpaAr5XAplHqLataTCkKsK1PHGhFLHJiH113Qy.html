@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD --> 
+<head>
+    <meta charset="utf-8"/>    <title> ভূমি উন্নয়ন কর:
+            Dakhila</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta content="width=600, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=no" name="viewport"/>
+
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="https://dakhila.ldtax.gov.bd/assets/global/css/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/assets/global/css/plugins-md.css" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/assets/admin/layout4/css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/assets/admin/layout4/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="https://dakhila.ldtax.gov.bd/assets/admin/layout4/css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="https://dakhila.ldtax.gov.bd/css/style.css" rel="stylesheet" type="text/css"/>
+        <!-- END THEME STYLES -->
+             <!-- 🔽🔽🔽 Bengali font support: added links + override (no existing line changed) -->
+    <!-- Load Unicode Bangla webfonts -->
+    <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">
+    <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet">
+    <!-- Extra fallback (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Prefer local SutonnyMJ if installed; else SolaimanLipi > Kalpurush > Noto Sans Bengali -->
+    <style>
+      @font-face{
+        font-family: 'SutonnyMJ';
+        src: local('SutonnyMJ'), local('SutonnyMJ Regular');
+        unicode-range: U+0980-09FF;
+      }
+      body, .input_bangla, .numeric_bangla {
+        font-family: 'SutonnyMJ', 'SolaimanLipi', 'kalpurush', 'Noto Sans Bengali', Arial, sans-serif !important;
+      }
+    </style>
+    <!-- 🔼🔼🔼 end Bengali font support -->
+<link rel="shortcut icon" href="https://dakhila.ldtax.gov.bd/img/favicon.ico"/>
+    <script src="https://dakhila.ldtax.gov.bd/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+</head>
+
+<body class="page-md page-sidebar-page-sidebar-closed-hide-logo page-header-fixed page-footer-fixed"   oncontextmenu="return false;" >
+        <div class="clearfix"></div>
+    <div class="page-container">
+        <div class="page-content">
+            <div class="page-content">
+                                <!-- end -->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet box blue">
+            <div
+        style="
+          display: flex;
+          margin-bottom: 1.25rem;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <button onclick="printDiv('printArea')" style="padding-top: 0.25rem;
+          padding-bottom: 0.25rem; 
+          padding-left: 0.75rem;
+          padding-right: 0.75rem; 
+          border-radius: 0.25rem; 
+          color: #ffffff; 
+          background-color: #3B82F6; border-color: #3B82F6; ">
+          প্রিন্ট
+        </button>
+      </div>
+
+            <div class="portlet-body">
+                <div id="printArea" style="width: 815px; margin: 0 auto;">
+                    <div class="col-md-12">
+                        <style type="text/css">
+                            body{
+                                font-family: "kalpurush",Arial,sans-serif;
+                                font-size: 13px !important;
+                                line-height: 1.2;
+                                color: #333;
+                                background-color: #fff;
+                            }
+                            .dotted_botton{
+                                border:none;
+                                border-bottom:1px dotted #000;
+                                background-color:#fff;
+                            }
+                            .border_none{
+                                border-top: none !important;
+                            }
+                            .table-bordered {
+                                border: 1px solid #ddd;
+                            }
+                            .qrcode-print{
+                               width:100%;
+                               display: list-item;
+                               list-style-image: url(data:image/jpg;base64,);
+                               list-style-position: inside;
+                               background-repeat: no-repeat;
+                            }
+                            .b1 {border: 1px dotted; padding: 2px;}
+                            .text-left{text-align:left}
+                            .text-right{text-align:right}
+                            .text-center{text-align:center}
+                        </style>
+                        <style type="text/css" media="print">
+                            @page {
+                                size:  a4;   /* auto is the initial value */
+                                margin: 0mm;  /* this affects the margin in the printer settings */
+                            }
+                            html{
+                                background-color: #FFFFFF; 
+                                margin: 0px;  /* this affects the margin on the html before sending to printer */
+                            }
+                            body{
+                                border: solid 0px blue ;
+                                margin: 0mm; /* margin you want for the content */
+                            }
+                        </style>
+
+                        <div style="font-family:'kalpurush',Arial,sans-serif; font-size:14px !important; line-height:1.2;color: #333; background-color: #fff; width: 7.9in; height: 11in; border-radius: 10px; border: dotted 1px; padding: 10px; float: left; margin: 30px auto; position: relative;">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="from-controll">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td class="text-left">বাংলাদেশ ফরম নং ১০৭৭</td>
+                                                <td class="text-right">(পরিশিষ্ট: ৩৮)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">(সংশোধিত)</td>
+                                                <td class="text-right input_bangla">ক্রমিক নং ১৫৩৯২৫০৪৭১৯৫</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center" colspan="2">
+                                                    ভূমি উন্নয়ন কর পরিশোধ রসিদ                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center" colspan="2">
+                                                    (অনুচ্ছেদ ৩৯২ দ্রষ্টব্য)                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div style="width: 100%; height: 20px;"></div>
+                                        <table style="width:100%;">
+                                            <tr>
+                                                <td style="width: 320px;">সিটি কর্পোরেশন/ পৌর/ ইউনিয়ন ভূমি অফিসের নাম:</td>
+                                                <td class="dotted_botton">চরপাথরঘাটা ইউনিয়ন ভূমি অফিস</td>
+                                            </tr>
+                                        </table>
+                                        <table style="margin-top:5px; width:100%;">
+                                            <tr>
+                                                <td style="width: 170px;">মৌজার নাম ও জে. এল. নং:</td>
+                                                <td class="dotted_botton input_bangla" style="padding: 0 10px 0 5px;">খোয়াজনগর-১১</td>
+                                                <td style="width: 105px">উপজেলা/থানা:</td>
+                                                <td class="dotted_botton" style="padding: 0 10px 0 5px;">কর্ণফুলী</td>
+                                                <td style="width: 40px">জেলা:</td>
+                                                <td class="dotted_botton" style="padding: 0 10px 0 5px;">চট্টগ্রাম</td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <table style="margin-top:5px; width:100%;">
+                                            <tr>
+                                                <td style="width: 225px"><!-- ২ নং রেজিস্টার অনুযায়ী হোল্ডিং নম্বর -->
+                                                ২ নং রেজিস্টার অনুযায়ী হোল্ডিং নম্বর:</td>
+                                                <td class="dotted_botton numeric_bangla" style="padding-left: 10px;">১১৩</td>
+                                            </tr>
+                                        </table>
+
+                                        <table style="margin-top:5px; width:100%;">
+                                            <tr>
+                                                <td style="width: 75px">খতিয়ান নং:</td>
+                                                <td class="dotted_botton numeric_bangla" style="padding-left: 10px;">১১৩</td>
+                                            </tr>
+                                        </table>
+                                        <div style="height: 10px"></div>
+                                    </div>
+
+                                    <div class="from-controll">
+                                        <p style="font-weight: bold; font-size: 12px; text-align: center; margin: 0px; padding: 0px;"><u>মালিকের বিবরণ</u></p>
+                                    </div>
+                                                                                            <table style="border: 1px dotted; border-collapse: collapse; margin:10px 2px ; width: 49%; font-size: 11px; float: left;">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:10%;text-align: center;" class="b1">ক্রমঃ</th>
+                                                <th style="width:60%;text-align: center;" class="b1">মালিকের নাম</th>
+                                                <th style="width:25%;text-align: center;" class="b1">মালিকের অংশ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="height: 63px;">
+                                            <tr>
+                                                <td class="b1 input_bangla text-center">১</td>
+                                                <td class="b1 input_bangla">খলিলের রহমান</td>
+                                                <td class="b1 input_bangla text-center">০.২০০</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="b1 input_bangla text-center">২</td>
+                                                <td class="b1 input_bangla">আবদুল মোতালেব</td>
+                                                <td class="b1 input_bangla text-center">০.১০০</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="b1 input_bangla text-center">৩</td>
+                                                <td class="b1 input_bangla">জালাল আহামদ</td>
+                                                <td class="b1 input_bangla text-center">০.১০০</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                       <table style="border: 1px dotted; border-collapse: collapse; margin:10px 2px ; width: 49%; font-size: 11px; float: right;">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:10%;text-align: center;" class="b1">ক্রমঃ</th>
+                                                <th style="width:60%;text-align: center;" class="b1">মালিকের নাম</th>
+                                                <th style="width:25%;text-align: center;" class="b1">মালিকের অংশ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="height: 42px;">
+                                        
+                                            <tr>
+                                                <td class="b1 input_bangla text-center">৪</td>
+                                                <td class="b1 input_bangla">দীল আহামদ</td>
+                                                <td class="b1 input_bangla text-center">০.৪০০</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="b1 input_bangla text-center">৫</td>
+                                                <td class="b1 input_bangla">আবদুল মালেক</td>
+                                                <td class="b1 input_bangla text-center">০.২০০</td>
+                                            </tr>     
+                                    </table>
+                            </div></div><div class="col-md-12">
+                                                <p style="font-weight: bold; font-size: 12px; text-align: center; margin: 0px; padding: 0px;"><u>জমির বিবরণ</u></p>
+                                            </div><div class="row"><div class="col-md-12">                                    <table style="border: 1px dotted; border-collapse: collapse; margin:10px 2px ; width: 49%; font-size: 11px; float: left;">
+                                        <thead>
+                                            <tr>
+                                                <th class="b1">ক্রমঃ</th>
+                                                <th class="b1">দাগ নং</th>
+                                                <th class="b1">জমির শ্রেণি</th>
+                                                <th class="b1">জমির পরিমাণ (শতাংশ)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="height: 63px;">
+                                             <tr>
+                                                <td class="b1 input_bangla text-center">১</td>
+                                                <td class="b1 input_bangla">৩৩০</td>
+                                                <td class="b1">নাল( কৃষি২)</td>
+                                                <td class="b1 input_bangla">৩২</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="b1 input_bangla text-center">২</td>
+                                                <td class="b1 input_bangla">৩৭৪</td>
+                                                <td class="b1">নাল( কৃষি২)</td>
+                                                <td class="b1 input_bangla">১০</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="b1 input_bangla text-center">৩</td>
+                                                <td class="b1 input_bangla">৩৮২</td>
+                                                <td class="b1">নাল( কৃষি২)</td>
+                                                <td class="b1 input_bangla">৫</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                                                    <table style="border: 1px dotted; border-collapse: collapse; margin:10px 2px ; width: 49%; font-size: 11px; float: right;">
+                                        <thead>
+                                            <tr>
+                                                <th class="b1">ক্রমঃ</th>
+                                                <th class="b1">দাগ নং</th>
+                                                <th class="b1">জমির শ্রেণি</th>
+                                                <th class="b1">জমির পরিমাণ (শতাংশ)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="height: 42px;">
+                                            <tr>
+                                                <td class="b1 input_bangla text-center">৪</td>
+                                                <td class="b1 input_bangla">৩৮৬</td>
+                                                <td class="b1">নাল( কৃষি২)</td>
+                                                <td class="b1 input_bangla">১.৫০</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="b1 input_bangla text-center">৫</td>
+                                                <td class="b1 input_bangla">৩৮৯</td>
+                                                <td class="b1">নাল( কৃষি২)</td>
+                                                <td class="b1 input_bangla">১২</td>
+                                            </tr>
+                                    <table style="border: 1px dotted; border-collapse: collapse; margin:10px 2px ; width: 100%; font-size: 12px;">
+                                        <tr>
+                                            <td class="b1 text-center" style="width: 50%;">সর্বমোট জমি (শতাংশ)</td>
+                                            <td class="b1 input_bangla" style="width: 50%;">৬০.৫০</td>
+                                        </tr>
+                                    </table>
+                                    <div style="height: 10px;"></div>
+                                    <table class="table table-striped table-bordered table-hover" style="margin:10px 2px ; width:100% !important;">
+                                        <tr>
+                                            <th style="text-align: center;" colspan="8">আদায়ের বিবরণ</th>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="text-align: center;" >তিন বৎসরের ঊর্ধ্বের বকেয়া</td>
+                                            <td style="text-align: center;">গত তিন বৎসরের বকেয়া</td>
+                                            <td style="text-align: center;">বকেয়ার জরিমানা ও ক্ষতিপূরণ</td>
+                                            <td style="text-align: center;" >হাল দাবি</td>
+                                            <td style="text-align: center;" >মোট দাবি</td>
+                                            <td style="text-align: center;" >মোট আদায়</td>
+                                            <td style="text-align: center;" >মোট বকেয়া</td>
+                                            <td style="text-align: center;" >মন্তব্য</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="center">১,৮১৫</td>
+                                            <td align="center">৩৬৩</td>
+                                            <td align="center">৫০১</td>
+                                            <td align="center">১২১</td>
+                                            <td align="center">২,৮০০</td>
+                                            <td align="center">২,৮০০</td>
+                                            <td align="center">০</td>
+                                            <td align="center"></td>
+                                        </tr>
+                                    </table>
+                                    <div style="width:100% !important; margin:10px 2px ;">
+                                        <p class="dotted_botton"> সর্বমোট (কথায়): দুই হাজার আট শত টাকা মাত্র ।
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div style="width: 350px; float: left;" align="left">
+                                                <p style="margin: 0 !important;">
+                                                    <!-- <p style="margin: 0 !important;">নোট: সর্বশেষ কর পরিশোধের সাল - ১৪৩২</p> -->
+                                                    নোট: সর্বশেষ কর পরিশোধের সাল - 2025-2026 (অর্থবছর)
+                                                </p>
+                                                <p class="input_bangla"> চালান নং : </p>
+                                                <p> তারিখ : <div style="margin-top: -37px;margin-left: 10px;"><p style="width: 115px;padding: 0;margin: 0;margin-left: 38px;margin-bottom: 2px;">৩ অগ্রহায়ণ ১৪৩২</p><span style="border-top:1px solid; margin-left:36px;">১৮ নভেম্বর, ২০২৫</span></p></div>
+                                                </p>
+                                            </div>
+                                            <div style="width: 90px; float: left;" align="center">
+                                                <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://dakhila-ldtax-gov-bd.com/dakhila-print/KeArFpaAr5XAplHqLataTCkKsK1PHGhFLHJiH113Qy.html" height="70" width="70" alt="" border="0">
+                                                
+                                            </div>
+                                            <div style="width: 265px; float: right; text-align: right;font-size: 12px;font-family: 'kalpurush',Arial,sans-serif;" >
+                                            <p class="text-center" style="padding: 5px; ">এই দাখিলা ইলেক্ট্রনিকভাবে তৈরি করা হয়েছে, <br> কোন স্বাক্ষর প্রয়োজন নেই।</p>
+                                                                                            </div>
+                                        </div>   
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-right" style="width: 100%; position: absolute; bottom: 0; right: 0;">
+                                    <div style="width: 100%; border-top: 1px dotted gray; margin-top:15px;"></div>
+                                    <div class="from-controll">1/1</div>
+                                </div>
+                            </div>                 
+                        </div>
+                    </div>
+                </div>
+                <!-- // -->
+                <!--
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="text-align: center !important; display: block !important;">
+                            <input style="margin-top: 10px; padding: 10px;" id="print" class="btn btn-md blue" type="button" onclick="printDiv('printArea')" value="প্রিন্ট" />
+                             <a class="btn btn-md btn-success" href="https://dakhila.ldtax.gov.bd/ldtax-holdings/individual-rashid-print-offline-preview/78873326" target="_blank" style="margin-top: 10px;padding:10px;">PDF</a> 
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+        setTimeout(function() {}, 500);
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>
+            </div>
+        </div>
+    </div>
+        </body>
+</html>
